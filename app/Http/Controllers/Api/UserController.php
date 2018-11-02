@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
@@ -48,5 +49,15 @@ class UserController extends Controller
             'success' => true,
             'message' => 'Logged User out successfully',
         ], 200);
+    }
+
+    /**
+    * Return a user
+    *
+    * @return JsonResponse
+    */
+    public function user()
+    {
+        return new UserResource(request()->user());
     }
 }
