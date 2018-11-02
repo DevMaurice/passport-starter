@@ -10,3 +10,6 @@
 - Add `HasApiTokens` trait to your User class. 
 - Next add `Passport::routes(); ` to the `AuthServiceProvider` to register all  the routes needed by passport.
 - Finally for setup change the api driver fromm `token` ro `passport` in         `auth.php` config file.
+
+#Register
+For registration do it like any other registration in laravel application, You can even add email verification and the likes.
