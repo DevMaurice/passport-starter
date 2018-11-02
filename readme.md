@@ -1,4 +1,4 @@
-# using Laravel Passport starter
+#Laravel Passport starter
 
 ## Steps
 - Create a new Laravel project.
