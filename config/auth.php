@@ -98,5 +98,6 @@ return [
             'expire' => 60,
         ],
     ],
+    'password_grant_client_id' => 2
 
 ];
