@@ -33,5 +33,7 @@ Here are the steps:
         3. `grant_type = 'refresh_token'`  // This must be *refresh_token*.
 - make sure the header contains `Authorization: Bearer {{token}} ` //Access token got from loggig in.
 
-
+#Log out
+To log out just send a post request to `{{url}}/api/logout
+The header must contain `Authorization: Bearer {{token}} `
 

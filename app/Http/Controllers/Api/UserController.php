@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -29,5 +30,23 @@ class UserController extends Controller
             'message' => 'User Created Successfully.',
             'data'  => [],
         ], 201);
+    }
+
+
+    /**
+     * Logout a user.
+     *
+     * @return JsonResponse
+     */
+    public function logout()
+    {
+        $accessToken = Auth::user()->token();
+
+        $accessToken->revoke();
+
+        return  new JsonResponse([
+            'success' => true,
+            'message' => 'Logged User out successfully',
+        ], 200);
     }
 }
